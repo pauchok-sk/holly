@@ -1,1 +1,15 @@
+.title {
+  font-weight: 400;
+  text-transform: uppercase;
+  font-family: "Prosto One", sans-serif;
+}
 
+.sect-title {
+  font-size: 26px;
+  @include laptop-min {
+    font-size: 24px;
+  }
+  @include tablet {
+    font-size: 20px;
+  }
+}

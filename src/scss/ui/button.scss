@@ -6,3 +6,29 @@
   padding: 0;
   color: inherit;
 }
+
+.btn {
+  @include flex-center;
+  text-align: center;
+  cursor: pointer;
+  background-color: white;
+  border: 1px solid var(--black);
+  outline: none;
+  padding: 10px 20px;
+  min-height: 47px;
+
+  font-size: 16px;
+  color: var(--dark);
+
+  transition: color .2s ease, background-color .2s ease, border-color .2s ease;
+
+  @include hover {
+    color: white;
+    background-color: var(--secondary);
+    border-color: var(--secondary);
+  }
+  @include pressed {
+    background-color: var(--black);
+    border-color: var(--black);
+  }
+}
