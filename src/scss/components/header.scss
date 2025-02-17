@@ -1,0 +1,173 @@
+.header {
+  position: sticky;
+  padding: 27px 0px;
+  top: 0;
+  border-bottom: 1px solid var(--black);
+  &__container {
+    @include flex-between;
+    gap: 25px;
+  }
+  &__logo {
+    display: block;
+    width: 200px;
+    @include laptop-min {
+      width: 150px;
+    }
+  }
+  &__logo-img {
+    width: 100%;
+  }
+  &__nav {
+    @include tablet {
+      position: fixed;
+      padding: 20px 17px;
+      inset: 0;
+      background-color: var(--black);
+      color: white;
+      transform: translateY(30px);
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity .4s ease, visibility .4s ease, transform .4s ease;
+
+      &._open {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+  &__burger-close {
+    display: none;
+    color: var(--secondary);
+    transition: color 0.2s ease;
+    width: 24px;
+    height: 24px;
+    margin: 0px 0px 12px auto;
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    @include hover {
+      color: white;
+    }
+
+    @include tablet {
+      @include flex-center;
+    }
+  }
+  &__list {
+    display: flex;
+    gap: 30px;
+    @include laptop-min {
+      gap: 20px;
+    }
+    @include tablet {
+      flex-direction: column;
+      gap: 0px;
+    }
+
+    li {
+      @include tablet {
+        @include flex-between;
+        flex-wrap: wrap;
+        width: 100%;
+        padding: 0px;
+        &:not(:last-child) {
+          border-bottom: 1px solid var(--secondary);
+        }
+      }
+
+      ul {
+        padding: 0;
+        width: 100%;
+
+        @media (min-width: 744px) {
+          display: none;
+        }
+      }
+    }
+
+    a {
+      position: relative;
+      font-size: 16px;
+      text-transform: uppercase;
+      transition: font-weight 0.2s ease;
+
+      @include hover {
+        &::before {
+          right: 0;
+        }
+      }
+      @include pressed {
+        font-weight: 500;
+      }
+
+      @include laptop-min {
+        font-size: 14px;
+      }
+      @include tablet {
+        padding: 15px 0px;
+      }
+
+      &::before {
+        position: absolute;
+        content: "";
+        background-color: currentColor;
+        bottom: 0;
+        height: 1px;
+        left: 0;
+        right: 100%;
+        transition: right 0.2s ease;
+      }
+    }
+
+    [data-spoller] {
+      position: relative;
+      width: 24px;
+      height: 24px;
+      display: none;
+      color: white;
+      @include tablet {
+        @include flex-center;
+
+        &._spoller-active {
+          span {
+            &:first-child {
+              transform: rotate(0deg);
+            }
+          }
+        }
+
+        span {
+          position: absolute;
+          width: 14px;
+          height: 1px;
+          background-color: currentColor;
+          transition: transform 0.2s ease;
+
+          &:first-child {
+            transform: rotate(90deg);
+          }
+        }
+      }
+    }
+  }
+  &__menu {
+    display: flex;
+    gap: 20px;
+  }
+  &__menu-btn {
+    width: 24px;
+    height: 24px;
+    transition: opacity 0.2s ease;
+    @include hover {
+      opacity: 0.5;
+    }
+  }
+  &__menu-icon {
+    width: 100%;
+    height: 100%;
+  }
+}
