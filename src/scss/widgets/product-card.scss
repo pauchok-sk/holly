@@ -15,7 +15,7 @@
     width: 28px;
     height: 28px;
     color: transparent;
-    z-index: 1;
+    z-index: 2;
     transition:
       color 0.2s ease,
       transform 0.2s ease;
@@ -43,11 +43,35 @@
     position: relative;
     width: 100%;
     padding-bottom: 135%;
-    @include hover {
-      .product-card__img {
-        opacity: 0.7;
+    @media (min-width: 993px) {
+      &:hover {
+        .product-card__order {
+          opacity: 1;
+        }
       }
     }
+  }
+  &__order {
+    @include flex-center;
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.3) 0%,
+      rgba(0, 0, 0, 0.3) 100%
+    );
+    opacity: 0;
+    z-index: 1;
+    transition: opacity 0.2s ease;
+
+    &._open {
+      opacity: 1;
+    }
+  }
+  &__order-btn {
+    border: none;
+    max-width: 130px;
+    width: 100%;
   }
   &__img {
     position: absolute;
@@ -59,6 +83,7 @@
     transition: opacity 0.2s ease;
   }
   &__rect {
+    cursor: pointer;
     display: none;
     width: 30px;
     position: absolute;
@@ -66,8 +91,16 @@
     bottom: 10px;
     right: 10px;
     z-index: 2;
-    @include tablet {
+    @include laptop-min {
       display: block;
+    }
+
+    &._active {
+      span {
+        &:first-child {
+          transform: rotate(0deg)
+        }
+      }
     }
   }
   &__rect-wrapper {
@@ -78,7 +111,9 @@
     height: 100%;
     color: var(--black);
     border-radius: 4px;
-    transition: color .2s ease, background-color .2s ease;
+    transition:
+      color 0.2s ease,
+      background-color 0.2s ease;
     @include hover {
       color: white;
       background-color: var(--black);
@@ -90,6 +125,7 @@
       height: 1px;
       border-radius: 10px;
       background-color: currentColor;
+      transition: transform .2s ease;
 
       &:first-child {
         transform: rotate(90deg);

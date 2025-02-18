@@ -239,6 +239,11 @@
       opacity: 0.5;
     }
 
+    &:nth-child(2) {
+      color: transparent;
+      stroke: var(--black);
+    }
+
     @include mobile {
       &:nth-child(2) {
         display: none;
@@ -256,7 +261,7 @@
     right: 0;
     transform: translateY(-40px);
     background-color: var(--gallery);
-    transition: transform .4s ease;
+    transition: transform 0.4s ease;
     z-index: -2;
 
     &._open {
