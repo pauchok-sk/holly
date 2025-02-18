@@ -12,10 +12,15 @@
 @import "./ui/list";
 @import "./ui/title";
 
+// widgets
+@import "./widgets/product-card";
+
 // components
 @import "./components/header";
 
 @import "./components/intro";
 @import "./components/new-collection";
+@import "./components/categories-sect";
+@import "./components/subscribe";
 
 @import "./components/footer";

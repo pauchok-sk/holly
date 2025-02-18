@@ -1,0 +1,122 @@
+.product-card {
+  position: relative;
+  grid-column: 3 span;
+  &._selected {
+    .product-card__like {
+      color: white;
+    }
+  }
+
+  &__like {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: block;
+    width: 28px;
+    height: 28px;
+    color: transparent;
+    z-index: 1;
+    transition:
+      color 0.2s ease,
+      transform 0.2s ease;
+
+    @include hover {
+      color: white;
+    }
+    @include pressed {
+      transform: scale(1.1);
+    }
+
+    @include tablet {
+      width: 20px;
+      height: 20px;
+    }
+
+    svg {
+      width: 100%;
+      height: 100%;
+      stroke: white;
+    }
+  }
+  &__gallery {
+    display: block;
+    position: relative;
+    width: 100%;
+    padding-bottom: 135%;
+    @include hover {
+      .product-card__img {
+        opacity: 0.7;
+      }
+    }
+  }
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.2s ease;
+  }
+  &__rect {
+    display: none;
+    width: 30px;
+    position: absolute;
+    height: 30px;
+    bottom: 10px;
+    right: 10px;
+    z-index: 2;
+    @include tablet {
+      display: block;
+    }
+  }
+  &__rect-wrapper {
+    @include flex-center;
+    position: relative;
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    color: var(--black);
+    border-radius: 4px;
+    transition: color .2s ease, background-color .2s ease;
+    @include hover {
+      color: white;
+      background-color: var(--black);
+    }
+
+    span {
+      position: absolute;
+      width: 12px;
+      height: 1px;
+      border-radius: 10px;
+      background-color: currentColor;
+
+      &:first-child {
+        transform: rotate(90deg);
+      }
+    }
+  }
+  &__title {
+    margin-top: 12px;
+    display: block;
+    font-size: 16px;
+    line-height: 19px;
+    transition: opacity 0.2s ease;
+    @include hover {
+      opacity: 0.5;
+    }
+    @include mobile {
+      font-size: 12px;
+      margin-top: 10px;
+    }
+  }
+  &__price {
+    font-size: 16px;
+    color: var(--secondary);
+    margin-top: 6px;
+    @include mobile {
+      font-size: 12px;
+      margin-top: 4px;
+    }
+  }
+}

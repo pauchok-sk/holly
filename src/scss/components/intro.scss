@@ -15,9 +15,9 @@
   &__title {
     text-align: center;
     max-width: 415px;
-    margin: 0px 0px 10px 0px;
+    margin: 0px 0px 10px 0px !important;
     @include tablet {
-      margin-bottom: 20px;
+      margin-bottom: 20px !important;
     }
   }
   &__body-img {

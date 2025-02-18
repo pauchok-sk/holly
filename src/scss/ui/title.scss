@@ -6,10 +6,13 @@
 
 .sect-title {
   font-size: 26px;
+  margin: 0px 0px 40px 0px;
   @include laptop-min {
     font-size: 24px;
   }
   @include tablet {
+    text-align: center;
+    margin: 0px 0px 20px 0px;
     font-size: 20px;
   }
 }

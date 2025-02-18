@@ -1,0 +1,57 @@
+.categories-sect {
+  display: flex;
+  align-items: stretch;
+  &__img {
+    width: 50%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    @include tablet {
+      display: none;
+    }
+  }
+  &__body {
+    @include flex-center;
+    flex-direction: column;
+    background-color: var(--black);
+    color: white;
+    padding: 60px 30px;
+    flex: 1;
+    height: auto;
+    @include tablet {
+      padding: 175px 20px;
+    }
+  }
+  &__list {
+    font-family: "Prosto One", sans-serif;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 24px;
+    
+    a {
+      font-size: 26px;
+      text-transform: uppercase;
+      transition: opacity .2s ease;
+      @include hover {
+        opacity: 0.5;
+      }
+      @include tablet {
+        font-size: 20px;
+      }
+    }
+  }
+  &__btn {
+    margin-top: 50px;
+    max-width: 270px;
+    width: 100%;
+
+    @include pressed {
+      background-color: transparent;
+      border-color: white;
+      color: white;
+    }
+    @include tablet {
+      margin-top: 40px;
+    }
+  }
+}
