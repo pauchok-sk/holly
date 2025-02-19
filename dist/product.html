@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>pauchoo0k</title>
+	<meta charset="UTF-8" />
+	<meta name="format-detection" content="telephone=no" />
+	<link rel="shortcut icon" href="favicon.ico" />
+	<link rel="stylesheet" href="css/style.min.css?_v=20250220005624" />
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Prosto+One&display=swap&_v=20250220005624" rel="stylesheet" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body class="body">
+	<header class="header">
+		<div class="header__wrapper">
+			<div class="container header__container _big">
+				<button class="btn-reset header__burger-btn" id="burger-open">
+					<span></span>
+					<span></span>
+					<span></span>
+				</button>
+				<a href="/" class="header__logo">
+					<img src="img/logo.svg" alt="logo" class="header__logo-img" />
+				</a>
+				<nav class="header__nav" id="burger">
+					<button class="btn-reset header__burger-close" id="burger-close">
+						<svg>
+							<use xlink:href="img/icons/icons.svg#icon-close"></use>
+						</svg>
+					</button>
+					<ul data-spollers="992,max" class="list header__list">
+						<li>
+							<a href="#">catalog</a>
+							<div data-spoller>
+								<span></span>
+								<span></span>
+							</div>
+							<ul>
+								<li><a href="#">dresses</a></li>
+								<li><a href="#">piece sets</a></li>
+								<li><a href="#">shirts </a></li>
+								<li><a href="#">top</a></li>
+								<li><a href="#">pants</a></li>
+							</ul>
+						</li>
+						<li><a href="#">New collection</a></li>
+						<li><a href="#">contacts</a></li>
+						<li><a href="#">About us</a></li>
+					</ul>
+				</nav>
+				<div class="header__menu">
+					<button class="btn-reset header__menu-btn" id="header-search-btn">
+						<svg class="header__menu-icon">
+							<use xlink:href="img/icons/icons.svg#icon-search"></use>
+						</svg>
+					</button>
+					<a href="#" class="header__menu-btn">
+						<svg class="header__menu-icon">
+							<use xlink:href="img/icons/icons.svg#icon-heart"></use>
+						</svg>
+					</a>
+					<a href="#" class="header__menu-btn">
+						<svg class="header__menu-icon">
+							<use xlink:href="img/icons/icons.svg#icon-basket"></use>
+						</svg>
+					</a>
+				</div>
+			</div>
+			<form action="#" class="header__search" id="header-search-form">
+				<div class="header__search-container container _big">
+					<input type="text" placeholder="Поиск..." class="header__search-input" />
+					<button class="btn-reset header__search-btn">
+						<svg>
+							<use xlink:href="img/icons/icons.svg#icon-search"></use>
+						</svg>
+					</button>
+				</div>
+			</form>
+		</div>
+	</header>
+	<main>
+
+		<section class="product">
+			<div class="container">
+				<button class="btn-back">
+					<svg>
+						<use xlink:href="img/icons/icons.svg#icon-arrow-line"></use>
+					</svg>
+					<span>Back</span>
+				</button>
+				<div class="product__wrapper">
+					<div class="product__gallery">
+						<button class="btn-reset slider-btn _prev">
+							<svg>
+								<use xlink:href="img/icons/icons.svg#icon-arrow"></use>
+							</svg>
+						</button>
+						<button class="btn-reset slider-btn _next">
+							<svg>
+								<use xlink:href="img/icons/icons.svg#icon-arrow"></use>
+							</svg>
+						</button>
+						<div class="product__nav">
+							<div class="product__nav-btn">
+								<img src="img/collection.jpg" alt="image" class="product__nav-img" />
+							</div>
+							<div class="product__nav-btn">
+								<img src="img/collection-2.jpg" alt="image" class="product__nav-img" />
+							</div>
+							<div class="product__nav-btn">
+								<img src="img/collection.jpg" alt="image" class="product__nav-img" />
+							</div>
+							<div class="product__nav-btn">
+								<img src="img/collection-2.jpg" alt="image" class="product__nav-img" />
+							</div>
+						</div>
+						<div class="product__slider-wrapper">
+							<div class="swiper product__slider">
+								<div class="swiper-wrapper">
+									<a href="img/collection.jpg" data-fancybox="product" class="swiper-slide">
+										<img src="img/collection.jpg" alt="" class="product__slide-img" />
+									</a>
+									<a href="img/collection-2.jpg" data-fancybox="product" class="swiper-slide">
+										<img src="img/collection-2.jpg" alt="" class="product__slide-img" />
+									</a>
+									<a href="img/collection.jpg" data-fancybox="product" class="swiper-slide">
+										<img src="img/collection.jpg" alt="" class="product__slide-img" />
+									</a>
+									<a href="img/collection-2.jpg" data-fancybox="product" class="swiper-slide">
+										<img src="img/collection-2.jpg" alt="" class="product__slide-img" />
+									</a>
+								</div>
+							</div>
+							<div class="product__slider-pagination"></div>
+						</div>
+					</div>
+					<div class="product__info">
+						<h1 class="title sect-title product__title">
+							Light blue loose fit cotton suit
+						</h1>
+						<div class="product__price">$90</div>
+						<form class="variations_form cart wvs-loaded">
+							<div>
+								<table class="variations" role="presentation">
+									<tbody>
+										<tr>
+											<th class="label">
+												<label for="pa_size">Size:</label><span class="woo-selected-variation-item-name" data-default=""></span>
+											</th>
+											<td class="value woo-variation-items-wrapper">
+												<select style="display: none" id="pa_size" class="woo-variation-raw-select" name="attribute_pa_size" data-attribute_name="attribute_pa_size" data-show_option_none="yes">
+													<option value="">Выбрать опцию</option>
+													<option value="XS" class="attached enabled">XS</option>
+													<option value="S" class="attached enabled">S</option>
+													<option value="M" class="attached enabled">M</option>
+													<option value="L" class="attached enabled">L</option>
+												</select>
+												<ul role="radiogroup" aria-label="Размер" class="single-product-variable-items wvs-style-squared variable-items-wrapper mixed-variable-items-wrapper" data-attribute_name="attribute_pa_size" data-attribute_values='["l","m","s","xl"]'>
+													<li aria-checked="false" tabindex="0" data-wvstooltip="L" class="variable-item button-variable-item button-variable-item-l selected" title="L" data-title="L" data-value="l" role="radio" data-wvstooltip-out-of-stock="" style="--horizontal-position: 0px">
+														<div class="variable-item-contents">
+															<span class="variable-item-span variable-item-span-button">L</span>
+														</div>
+													</li>
+													<li aria-checked="false" tabindex="0" data-wvstooltip="M" class="variable-item button-variable-item button-variable-item-m" title="M" data-title="M" data-value="m" role="radio" data-wvstooltip-out-of-stock="">
+														<div class="variable-item-contents">
+															<span class="variable-item-span variable-item-span-button">M</span>
+														</div>
+													</li>
+													<li aria-checked="false" tabindex="0" data-wvstooltip="S" class="variable-item button-variable-item button-variable-item-s" title="S" data-title="S" data-value="s" role="radio" data-wvstooltip-out-of-stock="">
+														<div class="variable-item-contents">
+															<span class="variable-item-span variable-item-span-button">S</span>
+														</div>
+													</li>
+													<li aria-checked="false" tabindex="0" data-wvstooltip="XL" class="variable-item button-variable-item button-variable-item-xl" title="XL" data-title="XL" data-value="xl" role="radio" data-wvstooltip-out-of-stock="">
+														<div class="variable-item-contents">
+															<span class="variable-item-span variable-item-span-button">XL</span>
+														</div>
+													</li>
+												</ul>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+								<div class="reset_variations_alert screen-reader-text" role="alert" aria-live="polite" aria-relevant="all"></div>
+							</div>
+						</form>
+						<ul class="list product__attributes">
+							<li>Color: blue</li>
+						</ul>
+						<div class="product__bottom-nav">
+							<form action="#" class="product__number-form">
+								<div class="product__number-wrapper">
+									<div class="product__number-btn" id="product-number-minus">
+										-
+									</div>
+									<input class="product__number" value="1" id="product-number" />
+									<div class="product__number-btn" id="product-number-plus">
+										+
+									</div>
+								</div>
+								<button class="btn product__add-btn _black">Add to bag</button>
+							</form>
+							<button class="btn-reset product__like">
+								<svg>
+									<use xlink:href='img/icons/icons.svg#icon-heart'></use>
+								</svg>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="rec">
+			<div class="container">
+				<h2 class="title sect-title rec__title">you may also like</h2>
+				<div class="swiper rec__slider">
+					<div class="swiper-wrapper">
+						<article class="swiper-slide product-card _selected">
+							<button class="product-card__like">
+								<svg>
+									<use xlink:href="img/icons/icons.svg#icon-heart"></use>
+								</svg>
+							</button>
+							<div class="product-card__gallery">
+								<div class="product-card__order">
+									<a href="#" class="btn product-card__order-btn">To order</a>
+								</div>
+								<img src="img/collection.jpg" alt="image" class="product-card__img" />
+								<div class="product-card__rect">
+									<div class="product-card__rect-wrapper">
+										<span></span>
+										<span></span>
+									</div>
+								</div>
+							</div>
+							<a href="#" class="product-card__title">Light blue loose fit cotton suit</a>
+							<div class="product-card__price">$ 90</div>
+						</article>
+						<article class="swiper-slide product-card">
+							<button class="product-card__like">
+								<svg>
+									<use xlink:href="img/icons/icons.svg#icon-heart"></use>
+								</svg>
+							</button>
+							<div class="product-card__gallery">
+								<div class="product-card__order">
+									<a href="#" class="btn product-card__order-btn">To order</a>
+								</div>
+								<img src="img/collection.jpg" alt="image" class="product-card__img" />
+								<div class="product-card__rect">
+									<div class="product-card__rect-wrapper">
+										<span></span>
+										<span></span>
+									</div>
+								</div>
+							</div>
+							<a href="#" class="product-card__title">Light blue loose fit cotton suit</a>
+							<div class="product-card__price">$ 90</div>
+						</article>
+						<article class="swiper-slide product-card">
+							<button class="product-card__like">
+								<svg>
+									<use xlink:href="img/icons/icons.svg#icon-heart"></use>
+								</svg>
+							</button>
+							<div class="product-card__gallery">
+								<div class="product-card__order">
+									<a href="#" class="btn product-card__order-btn">To order</a>
+								</div>
+								<img src="img/collection.jpg" alt="image" class="product-card__img" />
+								<div class="product-card__rect">
+									<div class="product-card__rect-wrapper">
+										<span></span>
+										<span></span>
+									</div>
+								</div>
+							</div>
+							<a href="#" class="product-card__title">Light blue loose fit cotton suit</a>
+							<div class="product-card__price">$ 90</div>
+						</article>
+						<article class="swiper-slide product-card">
+							<button class="product-card__like">
+								<svg>
+									<use xlink:href="img/icons/icons.svg#icon-heart"></use>
+								</svg>
+							</button>
+							<div class="product-card__gallery">
+								<div class="product-card__order">
+									<a href="#" class="btn product-card__order-btn">To order</a>
+								</div>
+								<img src="img/collection.jpg" alt="image" class="product-card__img" />
+								<div class="product-card__rect">
+									<div class="product-card__rect-wrapper">
+										<span></span>
+										<span></span>
+									</div>
+								</div>
+							</div>
+							<a href="#" class="product-card__title">Light blue loose fit cotton suit</a>
+							<div class="product-card__price">$ 90</div>
+						</article>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+	</main>
+	<footer class="footer">
+		<div class="container _big">
+			<div class="footer__head">
+				<div class="footer__main">
+					<a href="/" class="footer__logo">
+						<img src="img/logo.svg" alt="logo" class="footer__logo-img" />
+					</a>
+					<ul class="list footer__social">
+						<li>
+							<a class="footer__social-btn" href="#" target="_blank">
+								<svg>
+									<use xlink:href="img/icons/icons.svg#icon-fc-r"></use>
+								</svg>
+							</a>
+						</li>
+						<li>
+							<a class="footer__social-btn" href="#" target="_blank">
+								<svg>
+									<use xlink:href="img/icons/icons.svg#icon-inst-r"></use>
+								</svg>
+							</a>
+						</li>
+						<li>
+							<a class="footer__social-btn" href="#" target="_blank">
+								<svg>
+									<use xlink:href="img/icons/icons.svg#icon-wh-r"></use>
+								</svg>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<nav class="footer__nav">
+					<ul class="list footer__list">
+						<li><a href="#">Contact us</a></li>
+						<li><a href="#">Order cancellation</a></li>
+						<li><a href="#">Shipping and delivery</a></li>
+						<li><a href="#">About us</a></li>
+						<li><a href="#">Payment options</a></li>
+						<li><a href="#">Returns</a></li>
+					</ul>
+				</nav>
+			</div>
+			<div class="footer__bottom">
+				<p class="footer__copyright">@2025 All rights reserved</p>
+				<ul class="list footer__bottom-list">
+					<li><a href="#">Privacy policy</a></li>
+					<li><a href="#">Terms and conditions</a></li>
+					<li><a href="#">Do not sell or share my personal information</a></li>
+				</ul>
+			</div>
+		</div>
+	</footer>
+
+	<script src="js/app.min.js?_v=20250220005624"></script>
+</body>
+
+</html>

@@ -9,6 +9,7 @@ import productCardOrder from "./files/productCardOrder.js";
 import filters from "./files/filters.js";
 import sliders from "./files/sliders.js";
 import back from "./files/back.js";
+import productNumber from "./files/product-number.js";
 
 spoller();
 burger();
@@ -18,3 +19,4 @@ productCardOrder();
 filters();
 sliders();
 back();
+productNumber();

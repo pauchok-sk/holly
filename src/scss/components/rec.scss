@@ -1,0 +1,15 @@
+.rec {
+  padding: 50px 0px 110px 0px;
+  @include tablet {
+    padding: 20px 0px 50px 0px;
+  }
+
+  &__title {
+    text-align: center;
+  }
+  &__slider {
+    .swiper-slide {
+      box-sizing: border-box;
+    }
+  }
+}

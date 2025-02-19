@@ -152,7 +152,7 @@
     @include hover {
       opacity: 0.5;
     }
-    @include mobile {
+    @include mobile-min {
       font-size: 12px;
       margin-top: 10px;
     }

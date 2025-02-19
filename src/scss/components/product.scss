@@ -1,14 +1,43 @@
 .product {
-  padding: 20px 0px 110px 0px;
+  padding: 20px 0px 60px 0px;
+  @include laptop-min {
+    padding-bottom: 30px;
+  }
   &__wrapper {
     display: flex;
     align-items: start;
+    gap: 70px;
+    @include laptop-middle {
+      gap: 35px;
+    }
+    @include laptop-min {
+      flex-wrap: wrap;
+      gap: 40px;
+    }
   }
   &__gallery {
     position: relative;
     display: flex;
+    align-items: start;
     gap: 20px;
     flex: 0 1 560px;
+    @include laptop-middle {
+      flex-basis: 530px;
+      padding: 0 30px;
+    }
+    @include laptop-min {
+      margin: 0 auto;
+      flex-basis: 645px;
+    }
+    @include tablet {
+      flex-basis: 540px;
+    }
+    @include tablet-min {
+      flex: none;
+      width: 100%;
+      padding: 0;
+    }
+
     .slider-btn {
       position: absolute;
       top: 50%;
@@ -20,19 +49,34 @@
       &._next {
         right: -30px;
       }
+
+      @include laptop-middle {
+        &._prev {
+          left: 0;
+        }
+        &._next {
+          right: 0;
+        }
+      }
+      @include tablet-min {
+        display: none;
+      }
     }
   }
   &__nav {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    flex: 1;
+    width: 120px;
+    @include tablet-min {
+      display: none;
+    }
   }
   &__nav-btn {
     cursor: pointer;
     width: 100%;
     height: 140px;
-    transition: opacity .2s ease;
+    transition: opacity 0.2s ease;
     @include hover {
       opacity: 0.7;
     }
@@ -43,15 +87,42 @@
     height: 100%;
     object-fit: cover;
   }
+  &__slider-wrapper {
+    flex: 1;
+  }
   &__slider {
-    width: 420px;
+    width: 100%;
     flex-shrink: 0;
+    @include tablet-min {
+      max-width: 450px;
+      height: 535px !important;
+    }
+    @include mobile {
+      max-width: 390px;
+      height: 460px !important;
+    }
+    @include mobile-min {
+      max-width: 375px;
+      height: 410px !important;
+    }
 
     .swiper-slide {
       height: 520px !important;
-      transition: opacity .2s ease;
+      transition: opacity 0.2s ease;
       @include hover {
         opacity: 0.8;
+      }
+      @include laptop-middle {
+        height: 390px !important;
+      }
+      @include laptop-min {
+        height: 525px !important;
+      }
+      @include tablet {
+        height: 400px !important;
+      }
+      @include tablet-min {
+        height: 100% !important;
       }
     }
   }
@@ -72,7 +143,7 @@
       height: 10px;
       border-radius: 50%;
       background-color: var(--alto);
-      transition: background-color .2s ease;
+      transition: background-color 0.2s ease;
       @include hover {
         background-color: var(--black);
       }
@@ -80,6 +151,153 @@
       &.swiper-pagination-bullet-active {
         background-color: var(--black);
       }
+    }
+  }
+  &__info {
+    flex: 1;
+    @include laptop-min {
+      flex: none;
+      width: 100%;
+    }
+
+    .variations {
+      tr {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+      }
+
+      .label {
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 150%;
+        padding: 0;
+        color: black;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        gap: 16px;
+      }
+
+      li {
+        @include flex-center;
+        position: relative;
+        cursor: pointer;
+        transition: opacity 0.2s ease;
+        @include hover {
+          opacity: 0.5;
+        }
+
+        &.selected {
+          &::before {
+            position: absolute;
+            content: "";
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            border: 1px solid currentColor;
+          }
+        }
+      }
+    }
+  }
+  &__title {
+    max-width: 420px;
+    margin: 0px 0px 6px 0px;
+    @include laptop-min {
+      max-width: none;
+    }
+    @include tablet {
+      text-align: start;
+    }
+  }
+  &__price {
+    font-size: 27px;
+    font-weight: 400;
+    line-height: 150%;
+    margin-bottom: 30px;
+    color: var(--secondary);
+  }
+  &__attributes {
+    color: black;
+    margin-top: 20px;
+    li {
+      font-size: 18px;
+      font-weight: 300;
+      line-height: 150%;
+    }
+  }
+  &__bottom-nav {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 50px;
+    @include mobile {
+      flex-wrap: wrap;
+    }
+  }
+  &__number-form {
+    display: flex;
+    align-items: stretch;
+    gap: 12px;
+    flex: 1;
+    @include mobile {
+    }
+  }
+  &__number-wrapper {
+    display: flex;
+    height: auto;
+    flex: 0 1 105px;
+    border: 1px solid var(--alto);
+
+    font-size: 18px;
+    line-height: 150%;
+    text-align: center;
+  }
+  &__number-btn {
+    @include flex-center;
+    cursor: pointer;
+    flex: 1;
+    transition: color .2s ease, background-color .2s ease;
+    @include hover {
+      color: white;
+      background-color: var(--black);
+    }
+    @include pressed {
+      background-color: var(--secondary);
+    }
+  }
+  &__number {
+    @include flex-center;
+    padding: 0;
+    width: 33px;
+    text-align: center;
+    outline: none;
+    background-color: transparent;
+    border: none;
+  }
+  &__add-btn {
+    flex: 1;
+  }
+  &__like {
+    width: 36px;
+    height: 36px;
+    stroke: var(--black);
+    color: transparent;
+    transition: color 0.2s ease;
+    @include hover {
+      color: var(--blak);
+    }
+    &._selected {
+      color: var(--black);
+    }
+    svg {
+      width: 100%;
+      height: 100%;
     }
   }
 }
