@@ -1,12 +1,194 @@
 .catalog {
+  padding: 60px 0px 110px 0px;
+  @include tablet {
+    padding-bottom: 60px;
+  }
+  &__head {
+    @include flex-between;
+    margin-bottom: 40px;
+    @include tablet {
+      margin-bottom: 20px;
+    }
+
+    .sect-title {
+      margin-bottom: 0 !important;
+    }
+  }
+  &__filters-open {
+    display: none;
+
+    font-size: 16px;
+    transition: opacity .2s ease;
+    @include hover {
+      opacity: 0.5;
+    }
+    @include laptop-min {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
   &__wrapper {
+    display: flex;
+    align-items: start;
+    gap: 25px;
+  }
+  &__filters-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background-color: black;
+    z-index: 90;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .4s ease, visibility .4s ease;
+    @include laptop-min {
+      display: block;
+    }
+
+    &._active {
+      visibility: visible;
+      opacity: 0.5;
+    }
   }
   &__filters {
+    position: sticky;
+    top: 100px;
+    flex: 0 1 212px;
+    @include laptop-min {
+      position: fixed;
+      overflow-y: auto;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      max-width: 380px;
+      width: 100%;
+      background-color: white;
+      padding: 30px 20px;
+      transform: translateX(-380px);
+      z-index: 100;
+      transition: transform .4s ease;
+
+      &._open {
+        transform: translateX(0)
+      }
+    }
+  }
+  &__filters-head {
+    @include flex-between;
+    margin-bottom: 24px;
   }
   &__filters-title {
+    display: block;
+    font-size: 16px;
+  }
+  &__filters-close {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    display: none;
+    transition: opacity .2s ease;
+    @include hover {
+      opacity: 0.5
+    }
+
+    @include laptop-min {
+      @include flex-center;
+    }
+
+    span {
+      position: absolute;
+      width: 20px;
+      height: 2px;
+      border-radius: 8px;
+      background-color: currentColor;
+      &:first-child {
+        transform: rotate(45deg);
+      }
+      &:last-child {
+        transform: rotate(-45deg);
+      }
+    }
   }
   &__filter {
+    margin-bottom: 30px;
   }
   &__filter-btn {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19px;
+    text-transform: uppercase;
+    transition: opacity 0.2s ease;
+    @include hover {
+      opacity: 0.5;
+    }
+
+    &._spoller-active {
+      svg {
+        transform: rotate(180deg);
+      }
+    }
+
+    svg {
+      width: 20px;
+      height: 20px;
+      transition: transform 0.2s ease;
+    }
+  }
+  &__prices {
+    @include flex-between;
+    margin-top: 10px;
+    max-width: 180px;
+
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 19px;
+    color: var(--dark);
+    @include laptop-min {
+      max-width: none;
+    }
+  }
+  &__fitlers-submit {
+    width: 100%;
+    margin-top: 40px;
+  }
+  &__main {
+    flex: 1;
+  }
+  &__main-wrapper {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 20px;
+    row-gap: 30px;
+    @include tablet-min {
+      grid-template-columns: repeat(8, 1fr);
+    }
+
+    .product-card {
+      @include laptop-middle {
+        grid-column: 4 span;
+      }
+      @include laptop-min {
+        grid-column: 3 span;
+      }
+      @include tablet {
+        grid-column: 4 span;
+      }
+    }
+  }
+  &__main-btn {
+    margin: 50px auto 0px auto;
+    max-width: 255px;
+    width: 100%;
   }
 }

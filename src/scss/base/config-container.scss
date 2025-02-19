@@ -14,6 +14,9 @@
     padding: 0 15px !important;
   }
 
+  &._middle {
+    max-width: calc(1180px + (var(--offset-width) * 2));
+  }
   &._big {
     max-width: calc(1320px + (var(--offset-width) * 2));
   }

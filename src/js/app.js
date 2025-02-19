@@ -6,9 +6,11 @@ import burger from "./files/burger.js";
 import headerSearchToggle from "./files/headerSearchToggle.js";
 import fancy from "./files/fancy.js";
 import productCardOrder from "./files/productCardOrder.js";
+import filters from "./files/filters.js";
 
 spoller();
 burger();
 headerSearchToggle();
 fancy();
 productCardOrder();
+filters();

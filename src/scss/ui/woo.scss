@@ -1,0 +1,228 @@
+.bapf_body {
+  padding-top: 15px;
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    input[type="checkbox"] {
+      display: none;
+      &:checked + label {
+        &::after {
+          display: block;
+        }
+      }
+    }
+
+    label {
+      position: relative;
+      cursor: pointer;
+      padding-left: 28px;
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 19px;
+
+      &::before,
+      &::after {
+        position: absolute;
+        content: "";
+        width: 19px;
+        height: 19px;
+        left: 0;
+        top: 0;
+        border-radius: 3px;
+      }
+
+      &::before {
+        border: 1px solid var(--black);
+      }
+      &::after {
+        background: url("@img/check.svg") center top 4px / 11px auto no-repeat;
+        background-color: var(--black);
+        display: none;
+      }
+    }
+  }
+}
+
+.bapf_slidr_all {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 180px;
+  padding-bottom: 24px;
+  @include laptop-min {
+    max-width: none;
+  }
+  
+  &::before {
+    position: absolute;
+    content: "";
+    width: 5px;
+    height: 2px;
+    background-color: var(--dusty);
+    left: 50%;
+    top: 15px;
+    transform: translateX(-50%);
+    @include laptop-min {
+      width: 20px;
+    }
+  }
+}
+
+.bapf_from,
+.bapf_to {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex: 0 1 80px;
+  gap: 2px;
+  padding: 6px;
+  border-radius: 2px;
+  border: 1px solid var(--dusty);
+
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 19px;
+  @include laptop-min {
+    flex-basis: 120px;
+  }
+
+  input {
+    flex: 1;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    outline: none;
+    border: none;
+
+    font-weight: inherit;
+
+    &::placeholder {
+      color: var(--dusty);
+    }
+  }
+
+  .bapf_tbprice {
+    color: var(--dark);
+  }
+}
+
+.bapf_slidr_main.ui-widget-content {
+  background: var(--dusty) !important;
+  height: 4px !important;
+}
+.bapf_slidr_jqrui .bapf_slidr_main {
+  margin-bottom: 0px !important;
+}
+.bapf_slidr_main.ui-widget-content,
+.berocket_filter_price_slider.ui-widget-content {
+  background: var(--dusty);
+  border: 0;
+  border-radius: 0;
+  height: 4px;
+  padding: 0;
+}
+.bapf_slidr_main {
+  position: absolute;
+  left: 4px;
+  right: 4px;
+  bottom: 0;
+}
+.ui-slider-horizontal {
+  height: 0.8em;
+}
+.ui-slider {
+  position: relative;
+}
+.bapf_slidr_jqrui .bapf_from,
+.ui-slider,
+body .berocket_ajax_filters_sidebar_back.brapf_sidefl_left_line {
+  text-align: left;
+}
+.bapf_slidr_main.ui-widget-content .ui-slider-range,
+.berocket_filter_price_slider.ui-widget-content .ui-slider-range {
+  background: #000;
+}
+.ui-slider-horizontal .ui-slider-range {
+  top: 0;
+  height: 100%;
+}
+.ui-slider .ui-slider-range {
+  position: absolute;
+  z-index: 1;
+  font-size: 0.7em;
+  display: block;
+  border: 0;
+  background-position: 0 0;
+}
+.ui-widget-header {
+  background: var(--primary) !important;
+  margin-bottom: 0 !important;
+  height: 3px !important;
+}
+.bapf_slidr_main.ui-widget-content .ui-slider-handle,
+.berocket_filter_price_slider.ui-widget-content .ui-slider-handle,
+.slide.default .bapf_slidr_main .ui-state-default,
+.slide.default .bapf_slidr_main .ui-widget-header .ui-state-default,
+.slide.default .bapf_slidr_main.ui-widget-content .ui-state-default,
+.slide.default .berocket_filter_price_slider .ui-state-default,
+.slide.default
+  .berocket_filter_price_slider
+  .ui-widget-header
+  .ui-state-default,
+.slide.default
+  .berocket_filter_price_slider.ui-widget-content
+  .ui-state-default {
+  background: #ddd;
+  font-size: 14px;
+  width: 1em;
+  height: 1em;
+  border: 1px solid #555;
+  top: -4px !important;
+  border-radius: 2em;
+}
+.ui-slider-horizontal .ui-slider-handle {
+  top: -0.3em;
+  margin-left: -0.6em;
+}
+.ui-slider .ui-slider-handle {
+  position: absolute;
+  z-index: 2;
+  width: 1.2em;
+  height: 1.2em;
+  cursor: pointer;
+  -ms-touch-action: none;
+  touch-action: none;
+}
+.ui-slider-handle {
+  width: 12px !important;
+  height: 12px !important;
+  border: 1px solid var(--dusty) !important;
+  background: white !important;
+  outline: none !important;
+  top: -4px !important;
+}
+.ui-slider-handle:nth-child(2) {
+  margin-left: 0 !important;
+}
+.ui-slider-handle:last-child {
+  margin-right: 0 !important;
+}
+.ui-slider-range {
+  left: 0 !important;
+}
+.bapf_slidr_main {
+  position: absolute;
+  left: 4px;
+  right: 4px;
+  bottom: 0;
+}
+.bapf_slidr_main {
+  left: 0 !important;
+  right: 0 !important;
+}

@@ -22,6 +22,17 @@
 
   transition: color .2s ease, background-color .2s ease, border-color .2s ease;
 
+  &._black {
+    background-color: var(--black);
+    border-color: var(--black);
+    color: white;
+    @include pressed {
+      background-color: transparent;
+      color: var(--black);
+      border-color: var(--black);
+    }
+  }
+
   @include hover {
     color: white;
     background-color: var(--secondary);
