@@ -20,7 +20,10 @@
   font-size: 16px;
   color: var(--black);
 
-  transition: color .2s ease, background-color .2s ease, border-color .2s ease;
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease,
+    border-color 0.2s ease;
 
   &._black {
     background-color: var(--black);
@@ -41,5 +44,34 @@
   @include pressed {
     background-color: var(--black);
     border-color: var(--black);
+  }
+}
+
+.btn-back {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  color: inherit;
+
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 40px;
+
+  font-size: 16px;
+  font-weight: 500;
+  transition: opacity .2s ease;
+  @include hover {
+    opacity: 0.5;
+  }
+  @include tablet {
+    margin-bottom: 20px;
+  }
+
+  svg {
+    width: 18px;
+    height: 18px;
   }
 }
