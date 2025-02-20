@@ -1,0 +1,36 @@
+.product-number {
+  display: flex;
+  height: auto;
+  border: 1px solid var(--alto);
+
+  font-size: 18px;
+  line-height: 150%;
+  text-align: center;
+
+  .product-number-minus,
+  .product-number-plus {
+    @include flex-center;
+    cursor: pointer;
+    flex: 1;
+    transition:
+      color 0.2s ease,
+      background-color 0.2s ease;
+    @include hover {
+      color: white;
+      background-color: var(--black);
+    }
+    @include pressed {
+      background-color: var(--secondary);
+    }
+  }
+
+  .product-number-value {
+    @include flex-center;
+    padding: 0;
+    width: 33px;
+    text-align: center;
+    outline: none;
+    background-color: transparent;
+    border: none;
+  }
+}

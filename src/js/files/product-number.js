@@ -1,11 +1,17 @@
 export default function productNumber() {
-  const number = document.querySelector("#product-number");
-  
-  if (number) {
-    const btnPlus = document.querySelector("#product-number-plus");
-    const btnMinus = document.querySelector("#product-number-minus");
+  const numbers = document.querySelectorAll(".product-number");
 
-    btnPlus.addEventListener("click", () => number.value++)
-    btnMinus.addEventListener("click", () => number.value > 1 && number.value--)
+  if (numbers.length) {
+    numbers.forEach((n) => {
+      const btnPlus = n.querySelector(".product-number-plus");
+      const btnMinus = n.querySelector(".product-number-minus");
+      const value = n.querySelector(".product-number-value");
+
+      btnPlus.addEventListener("click", () => value.value++);
+      btnMinus.addEventListener(
+        "click",
+        () => value.value > 1 && value.value--
+      );
+    });
   }
 }

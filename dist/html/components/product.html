@@ -7,49 +7,51 @@
 			<span>Back</span>
 		</button>
 		<div class="product__wrapper">
-			<div class="product__gallery">
-				<button class="btn-reset slider-btn _prev">
-					<svg>
-						<use xlink:href="img/icons/icons.svg#icon-arrow"></use>
-					</svg>
-				</button>
-				<button class="btn-reset slider-btn _next">
-					<svg>
-						<use xlink:href="img/icons/icons.svg#icon-arrow"></use>
-					</svg>
-				</button>
-				<div class="product__nav">
-					<div class="product__nav-btn">
-						<img src="img/collection.jpg" alt="image" class="product__nav-img" />
-					</div>
-					<div class="product__nav-btn">
-						<img src="img/collection-2.jpg" alt="image" class="product__nav-img" />
-					</div>
-					<div class="product__nav-btn">
-						<img src="img/collection.jpg" alt="image" class="product__nav-img" />
-					</div>
-					<div class="product__nav-btn">
-						<img src="img/collection-2.jpg" alt="image" class="product__nav-img" />
-					</div>
-				</div>
-				<div class="product__slider-wrapper">
-					<div class="swiper product__slider">
-						<div class="swiper-wrapper">
-							<a href="img/collection.jpg" data-fancybox="product" class="swiper-slide">
-								<img src="img/collection.jpg" alt="" class="product__slide-img" />
-							</a>
-							<a href="img/collection-2.jpg" data-fancybox="product" class="swiper-slide">
-								<img src="img/collection-2.jpg" alt="" class="product__slide-img" />
-							</a>
-							<a href="img/collection.jpg" data-fancybox="product" class="swiper-slide">
-								<img src="img/collection.jpg" alt="" class="product__slide-img" />
-							</a>
-							<a href="img/collection-2.jpg" data-fancybox="product" class="swiper-slide">
-								<img src="img/collection-2.jpg" alt="" class="product__slide-img" />
-							</a>
+			<div class="product__gallery-wrapper">
+				<div class="product__gallery">
+					<button class="btn-reset slider-btn _prev">
+						<svg>
+							<use xlink:href="img/icons/icons.svg#icon-arrow"></use>
+						</svg>
+					</button>
+					<button class="btn-reset slider-btn _next">
+						<svg>
+							<use xlink:href="img/icons/icons.svg#icon-arrow"></use>
+						</svg>
+					</button>
+					<div class="product__nav">
+						<div class="product__nav-btn">
+							<img src="img/collection.jpg" alt="image" class="product__nav-img" />
+						</div>
+						<div class="product__nav-btn">
+							<img src="img/collection-2.jpg" alt="image" class="product__nav-img" />
+						</div>
+						<div class="product__nav-btn">
+							<img src="img/collection.jpg" alt="image" class="product__nav-img" />
+						</div>
+						<div class="product__nav-btn">
+							<img src="img/collection-2.jpg" alt="image" class="product__nav-img" />
 						</div>
 					</div>
-					<div class="product__slider-pagination"></div>
+					<div class="product__slider-wrapper">
+						<div class="swiper product__slider">
+							<div class="swiper-wrapper">
+								<a href="img/collection.jpg" data-fancybox="product" class="swiper-slide">
+									<img src="img/collection.jpg" alt="" class="product__slide-img" />
+								</a>
+								<a href="img/collection-2.jpg" data-fancybox="product" class="swiper-slide">
+									<img src="img/collection-2.jpg" alt="" class="product__slide-img" />
+								</a>
+								<a href="img/collection.jpg" data-fancybox="product" class="swiper-slide">
+									<img src="img/collection.jpg" alt="" class="product__slide-img" />
+								</a>
+								<a href="img/collection-2.jpg" data-fancybox="product" class="swiper-slide">
+									<img src="img/collection-2.jpg" alt="" class="product__slide-img" />
+								</a>
+							</div>
+						</div>
+						<div class="product__slider-pagination"></div>
+					</div>
 				</div>
 			</div>
 			<div class="product__info">
@@ -107,22 +109,83 @@
 				</ul>
 				<div class="product__bottom-nav">
 					<form action="#" class="product__number-form">
-						<div class="product__number-wrapper">
-							<div class="product__number-btn" id="product-number-minus">
-								-
-							</div>
-							<input class="product__number" value="1" id="product-number" />
-							<div class="product__number-btn" id="product-number-plus">
-								+
-							</div>
+						<div class="product__number-wrapper product-number">
+							<div class="product-number-minus">-</div>
+							<input class="product-number-value" value="1" />
+							<div class="product-number-plus">+</div>
 						</div>
 						<button class="btn product__add-btn _black">Add to bag</button>
 					</form>
 					<button class="btn-reset product__like">
 						<svg>
-							<use xlink:href='img/icons/icons.svg#icon-heart'></use>
+							<use xlink:href="img/icons/icons.svg#icon-heart"></use>
 						</svg>
 					</button>
+				</div>
+				<div data-spollers class="product__spollers">
+					<div class="product__spoller">
+						<button data-spoller class="btn-reset product__spoller-btn">
+							<span>Description</span>
+							<svg>
+								<use xlink:href="img/icons/icons.svg#icon-arrow"></use>
+							</svg>
+						</button>
+						<div>
+							<div class="product__spoller-content">
+								<p>
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum
+									impedit molestiae vitae officiis voluptate quos nemo,
+									accusantium fugiat sequi commodi!
+								</p>
+								<p>
+									Lorem ipsum dolor sit amet consectetur adipisicing elit.
+									Neque, voluptatum.
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="product__spoller">
+						<button data-spoller class="btn-reset product__spoller-btn">
+							<span>Model parameters</span>
+							<svg>
+								<use xlink:href="img/icons/icons.svg#icon-arrow"></use>
+							</svg>
+						</button>
+						<div>
+							<div class="product__spoller-content">
+								<p>
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum
+									impedit molestiae vitae officiis voluptate quos nemo,
+									accusantium fugiat sequi commodi!
+								</p>
+								<p>
+									Lorem ipsum dolor sit amet consectetur adipisicing elit.
+									Neque, voluptatum.
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="product__spoller">
+						<button data-spoller class="btn-reset product__spoller-btn">
+							<span>Shipping & Returns</span>
+							<svg>
+								<use xlink:href="img/icons/icons.svg#icon-arrow"></use>
+							</svg>
+						</button>
+						<div>
+							<div class="product__spoller-content">
+								<p>
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum
+									impedit molestiae vitae officiis voluptate quos nemo,
+									accusantium fugiat sequi commodi!
+								</p>
+								<p>
+									Lorem ipsum dolor sit amet consectetur adipisicing elit.
+									Neque, voluptatum.
+								</p>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
