@@ -1,24 +1,133 @@
 .order {
+  padding: 20px 0px 120px 0px;
+  @include laptop-min {
+    padding-bottom: 90px;
+  }
+  @include tablet {
+    padding-bottom: 60px;
+  }
   &__form {
+    display: flex;
+    align-items: start;
+    gap: 30px;
   }
   &__main {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    flex: 1;
   }
   &__item {
   }
   &__item-title {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 19px;
+    margin: 0px 0px 14px 0px;
+  }
+  &__item-content {
+    font-size: 16px;
+    color: var(--secondary);
+    margin: 0px 0px 12px 0px;
+  }
+  &__form-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
   }
   &__form-control {
+    width: 100%;
+    &._half {
+      width: calc(50% - 6px);
+    }
   }
   &__summary {
+    position: sticky;
+    top: 100px;
+    padding: 30px;
+    border: 1px solid var(--black);
+    margin-top: 33px;
+    flex: 1;
   }
   &__summary-title {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 19px;
+    margin: 0px 0px 14px 0px;
   }
   &__summary-list {
+    margin-bottom: 24px;
+    li {
+      @include flex-between;
+      gap: 10px;
+      padding: 16px 0px;
+      border-bottom: 1px solid var(--alto);
+
+      font-size: 16px;
+      line-height: 19px;
+    }
   }
   &__summary-total {
+    @include flex-between;
+
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 19px;
   }
   &__summary-total-price {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    span {
+      &:first-child {
+        color: var(--secondary);
+      }
+    }
   }
   &__summary-btn {
+    width: 100%;
+    margin-top: 65px;
+  }
+  &__pay-input {
+    display: none;
+    &:checked + label {
+      .order__label-circle {
+        border-width: 5px;
+      }
+      .order__label-title {
+        flex: 1;
+        padding: 0 20px;
+      }
+    }
+  }
+  &__pay-label {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 10px 12px;
+    border: 1px solid var(--black);
+    width: 100%;
+    min-height: 47px;
+  }
+  &__label-circle {
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid var(--black);
+  }
+  &__label-title {
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 0;
+    flex: 0;
+    font-size: 16px;
+    transition: flex .3s ease, padding .3s ease;
+  }
+  &__label-gallery {
+    @include flex-center;
+    margin: 0 auto;
+    gap: 10px;
   }
 }
