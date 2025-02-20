@@ -1,0 +1,129 @@
+<section class="order">
+	<div class="container">
+		<button class="btn-back">
+			<svg>
+				<use xlink:href="img/icons/icons.svg#icon-arrow-line"></use>
+			</svg>
+			<span>Back</span>
+		</button>
+		<h2 class="title sect-title">checkout</h2>
+		<form class="order__form">
+			<div class="order__main">
+				<div class="order__item">
+					<h5 class="order__item-title">Customer info</h5>
+					<div class="order__form-wrapper">
+						<div class="order__form-control">
+							<input type="text" placeholder="First name" name="Customer first name" class="input" />
+						</div>
+						<div class="order__form-control">
+							<input type="text" placeholder="Last name" name="Customer last name" class="input" />
+						</div>
+						<div class="order__form-control">
+							<input type="tel" placeholder="Number phone" name="Customer telephone" class="input" />
+						</div>
+						<div class="order__form-control">
+							<input type="email" placeholder="E-mail" name="Customer email" class="input" />
+						</div>
+					</div>
+				</div>
+				<div class="order__item">
+					<h5 class="order__item-title">Delivery</h5>
+					<div class="order__form-wrapper">
+						<div class="order__form-control">
+							<select name="Delivery country" class="input">
+								<option value="" disabled selected>Contry</option>
+								<option value="Russia">Russia</option>
+								<option value="Belarus">Belarus</option>
+								<option value="China">China</option>
+							</select>
+						</div>
+						<div class="order__form-control _half">
+							<input type="text" name="Delivery fist name" placeholder="First name" class="input" />
+						</div>
+						<div class="order__form-control _half">
+							<input type="text" name="Delivery last name" placeholder="Last name" class="input" />
+						</div>
+						<div class="order__form-control">
+							<input type="text" name="Delivery address" placeholder="Adress" class="input" />
+						</div>
+						<div class="order__form-control">
+							<input type="text" name="Delivery apartment" placeholder="Apartment, suite, etc (optional)" class="input" />
+						</div>
+						<div class="order__form-control _half">
+							<input type="text" name="Delivery postal code" placeholder="Postal code" class="input" />
+						</div>
+						<div class="order__form-control _half">
+							<input type="text" name="Delivery city" placeholder="City" class="input" />
+						</div>
+						<div class="order__form-control">
+							<input type="tel" name="Delivery phone" placeholder="Phone" class="input" />
+						</div>
+					</div>
+				</div>
+				<div class="order__item">
+					<h5 class="order__item-title">Payment</h5>
+					<p class="order__item-content">
+						All transactions are secure and encrypted
+					</p>
+					<div class="order__form-wrapper">
+						<input type="radio" id="payment-card" name="payment" value="card" checked class="order__pay-input" />
+						<label for="payment-card" class="order__pay-label">
+							<div class="order__label-circle"></div>
+							<span class="order__label-title">Credit card</span>
+							<div class="order__label-gallery">
+								<img src="img/m-card.png" alt="logo" />
+								<img src="img/visa.png" alt="logo" />
+							</div>
+						</label>
+
+						<input type="radio" id="payment-paypal" name="payment" value="paypal" class="order__pay-input" />
+						<label for="payment-paypal" class="order__pay-label">
+							<div class="order__label-circle"></div>
+							<span class="order__label-title">Credit card</span>
+							<div class="order__label-gallery">
+								<img src="img/paypal.png" alt="logo" />
+							</div>
+						</label>
+
+						<input type="radio" id="payment-apple" name="payment" value="apple" class="order__pay-input" />
+						<label for="payment-apple" class="order__pay-label">
+							<div class="order__label-circle"></div>
+							<span class="order__label-title">Credit card</span>
+							<div class="order__label-gallery">
+								<img src="img/apply-pay.png" alt="logo" />
+							</div>
+						</label>
+					</div>
+				</div>
+			</div>
+
+			<div class="order__summary">
+				<h5 class="order__summary-title">Order Summary</h5>
+				<ul class="list order__summary-list">
+					<li>
+						<span>Subtotal</span>
+						<span>$ 90</span>
+					</li>
+					<li>
+						<span>Estimated Shipping</span>
+						<span>$ 0.00</span>
+					</li>
+					<li>
+						<span>Estimated Tax</span>
+						<span>$ 7</span>
+					</li>
+				</ul>
+				<div class="order__summary-total">
+					<span>Total</span>
+					<div class="order__summary-total-price">
+						<span>USD</span>
+						<span>$ 97</span>
+					</div>
+				</div>
+				<button class="btn _black order__summary-btn">
+					Proceed to checkout
+				</button>
+			</div>
+		</form>
+	</div>
+</section>
