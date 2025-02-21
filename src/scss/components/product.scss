@@ -16,6 +16,8 @@
     }
   }
   &__gallery-wrapper {
+    position: sticky;
+    top: 100px;
     flex: 0 1 560px;
     @include laptop-middle {
       flex-basis: 530px;

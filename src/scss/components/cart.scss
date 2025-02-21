@@ -1,4 +1,11 @@
 .cart {
+  padding: 20px 0px 200px 0px;
+  @include laptop-min {
+    padding-bottom: 120px;
+  }
+  @include tablet {
+    padding-bottom: 80px;
+  }
   &__wrapper {
     display: flex;
     align-items: start;

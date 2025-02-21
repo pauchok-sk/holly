@@ -1179,6 +1179,8 @@ select.input {
   gap: 70px
 }
 .product__gallery-wrapper {
+  position: sticky;
+  top: 100px;
   flex: 0 1 560px
 }
 .product__gallery {
@@ -1392,6 +1394,9 @@ select.input {
 }
 .rec__slider .swiper-slide {
   box-sizing: border-box
+}
+.cart {
+  padding: 20px 0 200px 0
 }
 .cart__wrapper {
   display: flex;
@@ -3722,6 +3727,9 @@ html.with-fancybox body.hide-scrollbar {
   .product__title {
     max-width: none
   }
+  .cart {
+    padding-bottom: 120px
+  }
   .cart__wrapper {
     flex-wrap: wrap
   }
@@ -3959,6 +3967,9 @@ html.with-fancybox body.hide-scrollbar {
   }
   .rec {
     padding: 20px 0 50px 0
+  }
+  .cart {
+    padding-bottom: 80px
   }
   .cart__total-title {
     margin-bottom: 20px
