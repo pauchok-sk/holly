@@ -11,6 +11,7 @@ import sliders from "./files/sliders.js";
 import back from "./files/back.js";
 import productNumber from "./files/product-number.js";
 
+functions.mediaAdaptive();
 spoller();
 burger();
 headerSearchToggle();

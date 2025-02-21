@@ -1,0 +1,48 @@
+.privacy-policy {
+  padding: 60px 0px 120px 0px;
+  @include laptop-min {
+    padding-bottom: 90px;
+  }
+  @include tablet {
+    padding-bottom: 60px;
+  }
+  &__content {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 150%;
+    color: var(--shaft);
+
+    h4 {
+      margin-bottom: 25px;
+      color: #000;
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 150%;
+
+      &:first-child {
+        margin-top: 0;
+      }
+
+      &:not(:first-child) {
+        margin-top: 50px;
+      }
+    }
+
+    p {
+      margin: 20px 0px;
+    }
+
+    ul {
+      padding-left: 22px;
+    }
+
+    a {
+      text-decoration: underline;
+      text-underline-offset: 2px;
+      transition: opacity .2s ease;
+      @include hover {
+        opacity: 0.5;
+      }
+    }
+  }
+}
