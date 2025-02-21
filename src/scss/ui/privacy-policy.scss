@@ -1,0 +1,37 @@
+.input-policy {
+  display: none;
+  &:checked + label {
+    &::before {
+      background: url('@img/check.svg') center top 0 / 13px auto no-repeat;
+      background-color: currentColor;
+    }
+  }
+}
+
+.label-policy {
+  position: relative;
+  cursor: pointer;
+  padding-left: 25px;
+  display: block;
+  font-size: 14px;
+  margin-top: 15px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    width: 16px;
+    height: 16px;
+    border-radius: 2px;
+    border: 1px solid currentColor;
+  }
+
+  a {
+    text-decoration: underline;
+    transition: opacity .2s ease;
+    @include hover {
+      opacity: 0.5;
+    }
+  }
+}

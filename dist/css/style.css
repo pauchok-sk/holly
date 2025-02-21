@@ -562,6 +562,56 @@ body .berocket_ajax_filters_sidebar_back.brapf_sidefl_left_line {
 select.input {
   cursor: pointer
 }
+.modal {
+  display: none;
+  max-width: calc(100vw - 40px);
+  width: 500px
+}
+.modal__title {
+  font-size: 22px;
+  margin: 0 0 30px 0
+}
+.modal__form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%
+}
+.modal__form-control {
+  width: 100%
+}
+.modal__form-btn {
+  width: 100%
+}
+.input-policy {
+  display: none
+}
+.input-policy:checked+label::before {
+  background: url(../img/check.svg) center top 0/13px auto no-repeat;
+  background-color: currentColor
+}
+.label-policy {
+  position: relative;
+  cursor: pointer;
+  padding-left: 25px;
+  display: block;
+  font-size: 14px;
+  margin-top: 15px
+}
+.label-policy::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  width: 16px;
+  height: 16px;
+  border-radius: 2px;
+  border: 1px solid currentColor
+}
+.label-policy a {
+  text-decoration: underline;
+  transition: opacity .2s ease
+}
 .product-card {
   position: relative;
   grid-column: 3 span
@@ -1581,6 +1631,28 @@ select.input {
   justify-content: center;
   margin: 0 auto;
   gap: 10px
+}
+.return {
+  padding: 60px 0 120px 0;
+  color: #000
+}
+.return__content {
+  font-size: 18px;
+  line-height: 150%;
+  margin-bottom: 50px;
+  max-width: 730px
+}
+.return__content ul {
+  padding-left: 30px
+}
+.return__content p,
+.return__content ul {
+  margin: 0
+}
+.return__btn {
+  text-transform: uppercase;
+  max-width: 185px;
+  width: 100%
 }
 .footer {
   border-top: 1px solid var(--black);
@@ -3522,6 +3594,9 @@ html.with-fancybox body.hide-scrollbar {
   .order {
     padding-bottom: 90px
   }
+  .return {
+    padding-bottom: 90px
+  }
   .footer__head {
     margin-bottom: 80px
   }
@@ -3732,6 +3807,12 @@ html.with-fancybox body.hide-scrollbar {
   .order__main {
     flex: 0 0 100%
   }
+  .return {
+    padding-bottom: 60px
+  }
+  .return__content {
+    font-size: 16px
+  }
   .footer {
     padding: 50px 0
   }
@@ -3859,6 +3940,9 @@ html.with-fancybox body.hide-scrollbar {
     max-width: 375px;
     height: 410px!important
   }
+  .return__btn {
+    max-width: none
+  }
 }
 @media (any-hover:hover) {
   .btn:hover {
@@ -3876,6 +3960,9 @@ html.with-fancybox body.hide-scrollbar {
   .product-number .product-number-plus:hover {
     color: #fff;
     background-color: var(--black)
+  }
+  .label-policy a:hover {
+    opacity: .5
   }
   .product-card__like:hover {
     color: #fff
@@ -3970,6 +4057,9 @@ html.with-fancybox body.hide-scrollbar {
   .product-number .product-number-plus:active {
     color: #fff;
     background-color: var(--black)
+  }
+  .label-policy a:active {
+    opacity: .5
   }
   .product-card__like:active {
     color: #fff

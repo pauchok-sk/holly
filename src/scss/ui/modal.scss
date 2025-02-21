@@ -1,0 +1,22 @@
+.modal {
+  display: none;
+  max-width: calc(100vw - 40px);
+  width: 500px;
+
+  &__title {
+    font-size: 22px;
+    margin: 0px 0px 30px 0px;
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+  }
+  &__form-control {
+    width: 100%;
+  }
+  &__form-btn {
+    width: 100%;
+  }
+}
