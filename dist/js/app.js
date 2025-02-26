@@ -8848,9 +8848,6 @@
                 spaceBetween: 20,
                 grabCursor: true,
                 slideToClickedSlide: true,
-                autoplay: {
-                    delay: 3e3
-                },
                 navigation: {
                     prevEl: ".product .slider-btn._prev",
                     nextEl: ".product .slider-btn._next"

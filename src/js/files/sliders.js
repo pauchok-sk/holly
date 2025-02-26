@@ -26,9 +26,9 @@ export default function sliders() {
       spaceBetween: 20,
       grabCursor: true,
       slideToClickedSlide: true,
-      autoplay: {
-        delay: 3000,
-      },
+      // autoplay: {
+      //   delay: 3000,
+      // },
       navigation: {
         prevEl: ".product .slider-btn._prev",
         nextEl: ".product .slider-btn._next",
