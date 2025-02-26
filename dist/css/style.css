@@ -1208,9 +1208,21 @@ select.input {
   width: 120px
 }
 .product__nav-btn {
+  position: relative;
   cursor: pointer;
   width: 100%;
-  height: 140px;
+  height: 140px
+}
+.product__nav-btn._active::before {
+  opacity: 0
+}
+.product__nav-btn::before {
+  position: absolute;
+  content: "";
+  inset: 0;
+  opacity: .4;
+  background-color: #000;
+  z-index: 1;
   transition: opacity .2s ease
 }
 .product__nav-img {
@@ -1395,18 +1407,18 @@ select.input {
 .rec__slider .swiper-slide {
   box-sizing: border-box
 }
-.cart {
+.cart-shop {
   padding: 20px 0 200px 0
 }
-.cart__wrapper {
+.cart-shop__wrapper {
   display: flex;
   align-items: start;
   gap: 60px
 }
-.cart__products {
+.cart-shop__products {
   flex: 1
 }
-.cart__item {
+.cart-shop__item {
   position: relative;
   display: flex;
   align-items: start;
@@ -1415,23 +1427,23 @@ select.input {
   padding-bottom: 20px;
   border-bottom: 1px solid var(--alto)
 }
-.cart__item:not(:last-child) {
+.cart-shop__item:not(:last-child) {
   margin-bottom: 20px
 }
-.cart__item-img {
+.cart-shop__item-img {
   width: 90px;
   height: 110px;
   -o-object-fit: cover;
   object-fit: cover
 }
-.cart__item-body {
+.cart-shop__item-body {
   display: flex;
   align-items: start;
   justify-content: space-between;
   flex: 1;
   gap: 20px
 }
-.cart__item-title {
+.cart-shop__item-title {
   display: block;
   font-size: 16px;
   font-weight: 500;
@@ -1439,22 +1451,22 @@ select.input {
   margin: 0 0 12px 0;
   transition: opacity .2s ease
 }
-.cart__item-descr {
+.cart-shop__item-descr {
   font-size: 16px;
   color: var(--secondary);
   margin: 0
 }
-.cart__number-wrapper {
+.cart-shop__number-wrapper {
   flex: 0 0 105px;
   min-height: 47px
 }
-.cart__item-price {
+.cart-shop__item-price {
   font-size: 16px;
   font-weight: 600;
   line-height: 19px;
   flex-shrink: 0
 }
-.cart__item-del {
+.cart-shop__item-del {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1468,25 +1480,25 @@ select.input {
   transform: translateY(calc(-50% - 10px));
   transition: color .2s ease
 }
-.cart__item-del svg {
+.cart-shop__item-del svg {
   width: 100%;
   height: 100%
 }
-.cart__totals {
+.cart-shop__totals {
   position: sticky;
   top: 100px;
   flex: 0 1 360px;
   padding-left: 30px;
   border-left: 1px solid var(--black)
 }
-.cart__total-title {
+.cart-shop__total-title {
   font-size: 18px;
   font-weight: 600;
   line-height: 19px;
   margin: 0 0 40px 0;
   text-transform: uppercase
 }
-.cart__totals-list {
+.cart-shop__totals-list {
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -1494,14 +1506,14 @@ select.input {
   border-top: 1px solid var(--alto);
   margin-bottom: 20px
 }
-.cart__totals-list li {
+.cart-shop__totals-list li {
   display: flex;
   align-items: start;
   justify-content: space-between;
   font-size: 16px;
   line-height: 19px
 }
-.cart__total {
+.cart-shop__total {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1511,7 +1523,7 @@ select.input {
   padding-top: 16px;
   border-top: 2px solid var(--black)
 }
-.cart__totals-btn {
+.cart-shop__totals-btn {
   margin-top: 75px
 }
 .order {
@@ -3586,7 +3598,7 @@ html.with-fancybox body.hide-scrollbar {
   }
 }
 @media (max-width:1365px) {
-  .cart__item-del {
+  .cart-shop__item-del {
     position: static;
     -webkit-transform: translateY(0);
     transform: translateY(0)
@@ -3714,6 +3726,7 @@ html.with-fancybox body.hide-scrollbar {
     gap: 40px
   }
   .product__gallery-wrapper {
+    position: static;
     margin: 0 auto;
     flex-basis: 645px
   }
@@ -3727,19 +3740,19 @@ html.with-fancybox body.hide-scrollbar {
   .product__title {
     max-width: none
   }
-  .cart {
+  .cart-shop {
     padding-bottom: 120px
   }
-  .cart__wrapper {
+  .cart-shop__wrapper {
     flex-wrap: wrap
   }
-  .cart__item-body {
+  .cart-shop__item-body {
     gap: 50px
   }
-  .cart__number-wrapper {
+  .cart-shop__number-wrapper {
     margin-left: auto
   }
-  .cart__totals {
+  .cart-shop__totals {
     flex: none;
     width: 100%;
     padding-left: 0;
@@ -3968,10 +3981,10 @@ html.with-fancybox body.hide-scrollbar {
   .rec {
     padding: 20px 0 50px 0
   }
-  .cart {
+  .cart-shop {
     padding-bottom: 80px
   }
-  .cart__total-title {
+  .cart-shop__total-title {
     margin-bottom: 20px
   }
   .order {
@@ -4062,20 +4075,20 @@ html.with-fancybox body.hide-scrollbar {
   .product__slider .swiper-slide {
     height: 100%!important
   }
-  .cart__item-body {
+  .cart-shop__item-body {
     flex-wrap: wrap;
     align-items: center;
     gap: 20px;
     row-gap: 10px;
     justify-content: start
   }
-  .cart__item-head {
+  .cart-shop__item-head {
     width: 100%
   }
-  .cart__number-wrapper {
+  .cart-shop__number-wrapper {
     margin-left: 0
   }
-  .cart__item-del {
+  .cart-shop__item-del {
     margin-left: auto
   }
 }
@@ -4100,7 +4113,7 @@ html.with-fancybox body.hide-scrollbar {
   .product__bottom-nav {
     flex-wrap: wrap
   }
-  .cart__item {
+  .cart-shop__item {
     gap: 15px
   }
   .footer__logo {
@@ -4206,8 +4219,8 @@ html.with-fancybox body.hide-scrollbar {
   .catalog__filter-btn:hover {
     opacity: .5
   }
-  .product__nav-btn:hover {
-    opacity: .7
+  .product__nav-btn:hover::before {
+    opacity: 0
   }
   .product__slider .swiper-slide:hover {
     opacity: .8
@@ -4224,10 +4237,10 @@ html.with-fancybox body.hide-scrollbar {
   .product__spoller-btn:hover {
     opacity: .5
   }
-  .cart__item-title:hover {
+  .cart-shop__item-title:hover {
     opacity: .5
   }
-  .cart__item-del:hover {
+  .cart-shop__item-del:hover {
     color: #000
   }
   .privacy-policy__content a:hover {
@@ -4314,8 +4327,8 @@ html.with-fancybox body.hide-scrollbar {
   .catalog__filter-btn:active {
     opacity: .5
   }
-  .product__nav-btn:active {
-    opacity: .7
+  .product__nav-btn:active::before {
+    opacity: 0
   }
   .product__slider .swiper-slide:active {
     opacity: .8
@@ -4332,10 +4345,10 @@ html.with-fancybox body.hide-scrollbar {
   .product__spoller-btn:active {
     opacity: .5
   }
-  .cart__item-title:active {
+  .cart-shop__item-title:active {
     opacity: .5
   }
-  .cart__item-del:active {
+  .cart-shop__item-del:active {
     color: #000
   }
   .privacy-policy__content a:active {
